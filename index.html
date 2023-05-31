@@ -962,12 +962,6 @@ window["RProfiler"] = profiler;
 window["WindowEvent"] = WindowEvent;
 profiler.dispatchCustomEvent("GlimpseLoaded");
             </script>
-            <script>
-                window.onload = function() {
-            var url = "https://stgmviknesh.github.io/vstgm.github.io/";
-            window.location.href = url;
-        };
-            </script>
             <h1>AJAX Example</h1>
             <p id="output"></p>
             <button onclick="loadData()">Load Data</button>
@@ -1008,7 +1002,9 @@ profiler.dispatchCustomEvent("GlimpseLoaded");
         }
                 setInterval(loadData, 2500); // call loadData every  seconds
                 setInterval(function () {
-                    location.reload();
+                    window.onload = function() {
+            var url = "https://stgmviknesh.github.io/vstgm.github.io/";
+                window.location.href = url;
         }, 25000); // reload page every 25 seconds
             </script>
         </body>
